@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "name": "koreader-lambda-server",
+    "builds": [
+        { "src": "src/*.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { 
+            "src": "/users/create", 
+            "methods": ["POST"], 
+            "dest": "/src/create_user.js"
+        },
+        { 
+            "src": "/users/auth", 
+            "methods": ["GET"], 
+            "dest": "/src/auth_user.js"
+        },
+        { 
+            "src": "/syncs/progress", 
+            "methods": ["PUT"], 
+            "dest": "/src/update_progress.js"
+        },
+        { 
+            "src": "/syncs/progress/(?<document>[^/]+)$", 
+            "methods": ["GET"], 
+            "dest": "/src/get_progress.js?document=$document"
+        },
+        {
+            "src": "/healthcheck", 
+            "methods": ["GET"], 
+            "dest": "/src/healthcheck.js" }
+    ]
+}

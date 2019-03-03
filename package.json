@@ -1,0 +1,22 @@
+{
+  "name": "koreader-lambda-server",
+  "version": "1.0.0",
+  "description": "Serveless synchronization service for koreader devices compatible with now.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "dev-server -w --port 3030"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@iridium/dev-server": "0.0.2",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
